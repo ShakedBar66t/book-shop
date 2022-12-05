@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/books.jpg");
+}
+
+
+table{
+    background-color: #cccccc;
+    border: 2px black solid;
+    border-spacing: 10px;
+    word-spacing: 10px;
+}
+
+button {
+    background-color: rgb(0, 108, 36);
+    color: whitesmoke;
+    border:0;
+    border-radius: .2em;
+    padding: 6px 10px;
+    margin: 2px;
+    cursor: pointer;    
+}
+button:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+td {
+    border: 3px black solid;
+    width: 2000px;
+    text-align: center;    
+}
+
+.modal-wrapper{
+    background-color: rgba(0, 0, 0, 0.663);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 200;
+}
+
+.hidden{
+    display: none
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background-color: #EDE4E0;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    text-align: center;
+    z-index: 300;
+}
+
+.modal h2 span{
+    color: green;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    border: 2px black solid;
+}
+
+.quantity{
+    margin-top: 7px;
+    size: 20px;
+    width: 20px;
+}
+
+.add-rating{
+    background-color: green;
+
+}
+.drop-rating{
+    background-color: green;
+
+}
+
+.book-filter{
+    background-color: #cccccc;
+    opacity: 90%;
+}
+
+.add-book{
+    background-color: #cccccc;
+}

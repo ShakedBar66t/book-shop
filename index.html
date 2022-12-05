@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>book-shop</title>
+</head>
+
+<body>
+
+    <section class="book-filter">
+        <label for="text-input">Search Book Title</label>
+        <input type="text" id="text-input" onchange="onSetBookFilter('searchStr', this.value)">
+        <label for="text-input">Max Price</label>
+        <input type="range" min="0" max="500" id="max-price-input" onchange="onSetBookFilter('maxPrice', this)">
+        <label for="text-input">Min Rating</label>
+        <input type="range" min="0" max="10" id="min-rating-input" onchange="onSetBookFilter('minRating', this.value)">
+
+    </section>
+    <div class="hidden modal-wrapper">
+        <div class="modal">
+            <h1></h1>
+            <h2>Book Price <span></span> </h2>
+            <h3></h3>
+            <p></p>
+            <button onclick="onCloseModal()">Close</button>
+            <div class="rating">
+                <button class="add-rating" onclick="onSetRating(1)">+</button>
+                <div class="quantity">0</div>
+                <button class="drop-rating" onclick="onSetRating(-1)">-</button>
+            </div>
+        </div>
+    </div>
+    <span class="add-book" title="add book" onclick="onAddBook()">Create a new book</span>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <button class="next-page-button"  onclick="onNextPage()">Next Page</button>
+    <button class="prev-page-button"  onclick="onPreviousPage()">Previous Page</button>
+
+
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/util-service.js"></script>
+    <script src="js/services/book-service.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>
